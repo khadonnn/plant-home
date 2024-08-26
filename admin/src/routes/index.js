@@ -1,17 +1,45 @@
-import Account from '../pages/Account';
-import Category from '../pages/Category';
-import Dashboard from '../pages/Dashboard';
-import Home from '../pages/Home';
-import Product from '../pages/Product';
-import Promotion from '../pages/Promotion';
-import Chat from '../pages/Chat';
+import Account from '../pages/account';
+import Category from '../pages/category';
+import Dashboard from '../pages/dashboard';
+import Home from '../pages/home';
+import Product from '../pages/product';
+import Promotion from '../pages/promotion';
+import Chat from '../pages/chat';
+
+import HousePlant from '../pages/product/houseplant';
+import OfficePlant from '../pages/product/officeplant';
+import StorePlant from '../pages/product/storeplant';
+import HouseDetail from '../pages/product/houseplant/HouseDetail';
+import OfficeDetail from '../pages/product/officeplant/OfficeDetail';
+import StoreDetail from '../pages/product/storeplant/StoreDetail';
+
 //public routes
 const publicRoutes = [];
 //private routes
 const privateRoutes = [
   { path: '/', component: Home },
   { path: '/dashboard', component: Dashboard },
-  { path: '/product', component: Product },
+  {
+    path: '/product',
+    component: Product,
+    children: [
+      {
+        path: '/houseplant',
+        component: HousePlant,
+        children: [{ path: '/:id', component: HouseDetail }],
+      },
+      {
+        path: '/officeplant',
+        component: OfficePlant,
+        children: [{ path: '/:id', component: OfficeDetail }],
+      },
+      {
+        path: '/plant',
+        component: StorePlant,
+        children: [{ path: '/:id', component: StoreDetail }],
+      },
+    ],
+  },
   { path: '/promotion', component: Promotion },
   { path: '/category', component: Category },
   { path: '/account', component: Account },
