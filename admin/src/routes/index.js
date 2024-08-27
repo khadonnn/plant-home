@@ -22,21 +22,21 @@ const privateRoutes = [
   {
     path: '/product',
     component: Product,
-    children: [
+    child: [
       {
         path: '/houseplant',
         component: HousePlant,
-        children: [{ path: '/:id', component: HouseDetail }],
+        child: [{ path: '/:houseId', component: HouseDetail }],
       },
       {
         path: '/officeplant',
         component: OfficePlant,
-        children: [{ path: '/:id', component: OfficeDetail }],
+        child: [{ path: '/:officeId', component: OfficeDetail }],
       },
       {
         path: '/plant',
         component: StorePlant,
-        children: [{ path: '/:id', component: StoreDetail }],
+        child: [{ path: '/:storeId', component: StoreDetail }],
       },
     ],
   },

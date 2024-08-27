@@ -1,15 +1,21 @@
+import { Fragment } from 'react';
 import { Route } from 'react-router-dom';
 
-const RecursiveRoute = ({ routes }) => {
-  console.log('reout', routes);
-  const Page = routes.component;
-  // return routes.map((route) => (
-  //   <Route key={route.path} path={route.path} element={<Page />}>
-  //     {route.children && RecursiveRoute(route.children)}
-  //   </Route>
-  // ));
+const recursiveRoute = (routes, parentPath = "") => {
+  console.log('routes', routes);
+  return routes.map(({ path, component: Page, child }) => {
+    const fullPath = parentPath + path
+    if (child) {
+      return (
+        <Fragment key={fullPath}>
+          <Route key={fullPath} path={fullPath} element={<Page />} />
+          {recursiveRoute(child, fullPath)}
+        </Fragment>
+      )
+    }
+    return <Route key={fullPath} path={fullPath} element={<Page />} />
+  })
 
-  return <Route path="/" element={<p>hello worl</p>} />;
 };
 
-export default RecursiveRoute;
+export default recursiveRoute;
