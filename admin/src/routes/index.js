@@ -17,32 +17,36 @@ import StoreDetail from '../pages/product/storeplant/StoreDetail';
 const publicRoutes = [];
 //private routes
 const privateRoutes = [
-  { path: '/', component: Home },
-  { path: '/dashboard', component: Dashboard },
+  { path: '/', component: Home, name: 'Home' },
+  { path: '/dashboard', component: Dashboard, name: 'Dashboard' },
   {
     path: '/product',
+    name: 'Product',
     component: Product,
     child: [
       {
         path: '/houseplant',
         component: HousePlant,
+        name: 'HousePlant',
         child: [{ path: '/:houseId', component: HouseDetail }],
       },
       {
         path: '/officeplant',
         component: OfficePlant,
+        name: 'OfficePlant',
         child: [{ path: '/:officeId', component: OfficeDetail }],
       },
       {
         path: '/plant',
         component: StorePlant,
+        name: 'StorePlant',
         child: [{ path: '/:storeId', component: StoreDetail }],
       },
     ],
   },
-  { path: '/promotion', component: Promotion },
-  { path: '/category', component: Category },
-  { path: '/account', component: Account },
-  { path: '/chat', component: Chat },
+  { path: '/promotion', component: Promotion, name: 'Promotion' },
+  { path: '/category', component: Category, name: 'Category' },
+  { path: '/account', component: Account, name: 'Account' },
+  { path: '/chat', component: Chat, name: 'Chat' },
 ];
 export { privateRoutes, publicRoutes };
