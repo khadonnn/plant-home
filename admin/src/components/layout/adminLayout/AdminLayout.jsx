@@ -6,7 +6,7 @@ const AdminLayout = ({ header, sidebar, content, footer, children }) => {
       <div className="flex h-full">
         <div>
           <div className="p-4 text-white">{header}</div>
-          <div className="min-w-[256px]">
+          <div className="min-w-[256px] overflow-hidden">
             <hr className="-ml-6 border-t-[1px] border-gray-800 pt-3" />
             {sidebar}
           </div>
