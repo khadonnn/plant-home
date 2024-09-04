@@ -2,7 +2,7 @@ import React from 'react';
 
 const AdminLayout = ({ header, sidebar, content, footer, children }) => {
   return (
-    <div className="admin-layout relative h-screen overflow-hidden bg-cus-dark pb-2 pl-6 pr-2 pt-2 text-base font-medium">
+    <div className="admin-layout relative h-screen overflow-hidden bg-cus-white pb-2 pl-6 pr-2 pt-2 text-base font-medium">
       <div className="flex h-full">
         <div>
           <div className="p-4 text-white">{header}</div>
@@ -15,9 +15,7 @@ const AdminLayout = ({ header, sidebar, content, footer, children }) => {
             {footer}
           </div>
         </div>
-        <div className="grow p-6 text-white md:rounded-lg md:bg-cus-brown lg:rounded-lg lg:bg-cus-brown lg:p-10 lg:shadow-sm lg:ring-1 lg:ring-zinc-800 dark:lg:bg-zinc-800 dark:lg:ring-white/10">
-          {content}
-        </div>
+        <div className="grow bg-white p-6 md:rounded-lg">{content}</div>
       </div>
     </div>
   );
