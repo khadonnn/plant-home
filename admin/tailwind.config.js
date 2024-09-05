@@ -9,6 +9,7 @@ export default {
         'cus-dark': '#09090b',
         'cus-brown': '#18181b',
         'cus-white': '#edeff5',
+        'cus-cream': '#f9fafb'
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

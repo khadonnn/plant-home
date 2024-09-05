@@ -1,9 +1,9 @@
 import React from 'react';
-import RecursiveSideBar2 from './RecursiveSideBar2';
+import RecursiveSideBar from './RecursiveSideBar';
 const SideBar = ({ routes }) => {
   return (
     <>
-      <RecursiveSideBar2 routes={routes} />
+      <RecursiveSideBar routes={routes} />
     </>
   );
 };
