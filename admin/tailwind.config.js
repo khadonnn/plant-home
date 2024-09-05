@@ -15,5 +15,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require('./src/plugins/scrollbar.tw.js')],
 };
