@@ -14,20 +14,20 @@ const AdminLayout = ({ header, sidebar, content, footer, children }) => {
     }
   }, [darkMode]);
   return (
-    <div className="admin-layout relative h-screen bg-cus-white pb-2 pl-6 pr-2 pt-2 text-base font-medium text-cus-dark dark:bg-cus-dark dark:text-cus-white lg:ring-zinc-800">
+    <div className="admin-layout relative h-screen bg-cus-white pb-2 pr-2 pt-2 text-base font-medium text-cus-dark dark:bg-cus-dark dark:text-cus-white lg:ring-zinc-800">
       <div className="flex h-full">
-        <div className="">
-          <div className="p-4">{header}</div>
-          <div className="min-w-[256px] text-cus-white dark:text-cus-dark">
-            <hr className="-ml-6 mt-3 border-t-[1px] border-gray-400 dark:border-gray-800" />
+        <div className="flex flex-col">
+          <div className="pr-1">{header}</div>
+          <div className="min-w-[256px] flex-grow overflow-y-auto">
+            <hr className="border-border-lig/20 dark:border-border-dark -ml-6 mt-2 border-t-[1px]" />
             {sidebar}
           </div>
-          <div className="absolute bottom-5 min-w-[256px]">
-            <hr className="-ml-6 mb-3 border-t-[1px] border-gray-400 dark:border-gray-800" />
+          <div className="min-w-[256px]">
+            <hr className="border-border-lig/20 dark:border-border-dark -ml-6 mb-3 border-t-[1px]" />
             {footer}
           </div>
         </div>
-        <div className="grow bg-white md:rounded-lg lg:rounded-lg lg:p-1 lg:shadow-sm lg:ring-1 lg:ring-zinc-400 dark:lg:bg-zinc-800 dark:lg:ring-white/10">
+        <div className="flex-grow bg-cus-cream md:rounded-lg lg:rounded-lg lg:p-1 lg:shadow-sm lg:ring-1 lg:ring-zinc-400/20 dark:lg:bg-zinc-800 dark:lg:ring-white/10">
           <div className="h-12px flex justify-end">
             <Button
               className="min-w-0 p-1"

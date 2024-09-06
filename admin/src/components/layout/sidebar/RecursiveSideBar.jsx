@@ -51,7 +51,6 @@ const NavBarBtn = ({ route, parentPath = '', isRecursive }) => {
           e.stopPropagation();
           handleCollapse();
         }}
-        className="text-white"
       >
         {open ? <ExpandLess /> : <ExpandMore />}
       </span>
@@ -60,7 +59,7 @@ const NavBarBtn = ({ route, parentPath = '', isRecursive }) => {
   if (!isNavBar) return null;
 
   return (
-    <div className="text-white dark:text-cus-dark">
+    <div>
       <ListItemButton
         key={fullPath}
         onClick={handleBtn}
