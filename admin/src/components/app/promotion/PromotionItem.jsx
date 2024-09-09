@@ -1,7 +1,7 @@
 import { AlignLeft, ArrowLeft, ArrowRightCircle, Eye } from 'lucide-react';
 import React from 'react';
 
-const PromotionItem = () => {
+const PromotionItem = (props) => {
   return (
     <li>
       <hr
@@ -21,7 +21,7 @@ const PromotionItem = () => {
           <div className="space-y-1.5">
             <div className="text-base/6 font-semibold">
               <a data-headlessui-state href="/events/1000">
-                Bear Hug: Live in Concert
+                {props.name}
               </a>
             </div>
             <div className="text-xs/6 text-zinc-500">
@@ -33,7 +33,7 @@ const PromotionItem = () => {
         </div>
         <div className="flex items-center gap-4">
           <span className="inline-flex items-center gap-x-1.5 rounded-md bg-lime-400/20 px-1.5 py-0.5 text-sm/5 font-medium text-lime-700 group-data-[hover]:bg-lime-400/30 dark:bg-lime-400/10 dark:text-lime-300 dark:group-data-[hover]:bg-lime-400/15 max-sm:hidden sm:text-xs/5 forced-colors:outline">
-            On Sale
+            On
           </span>
         </div>
       </div>

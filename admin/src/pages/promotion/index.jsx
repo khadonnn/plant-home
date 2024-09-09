@@ -6,7 +6,7 @@ export default function Promotion() {
   return (
     <section id="promotion">
       <Title text="Promotion" />
-      <div className="scrollbar-none h-full w-full overflow-auto md:px-12 lg:px-32">
+      <div className="h-[80vh] w-full overflow-y-auto scrollbar-none">
         <PromotionList />
       </div>
     </section>
