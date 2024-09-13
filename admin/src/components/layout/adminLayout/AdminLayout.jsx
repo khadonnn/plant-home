@@ -15,7 +15,9 @@ const AdminLayout = ({ header, sidebar, content, footer, children }) => {
             {footer}
           </div>
         </div>
-        <div className="grow bg-white p-6 md:rounded-lg">{content}</div>
+        <div className="h-full grow overflow-auto bg-white p-6 md:rounded-lg">
+          {content}
+        </div>
       </div>
     </div>
   );
